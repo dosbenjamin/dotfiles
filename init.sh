@@ -59,7 +59,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/
 # Remove .zshrc file created by Oh My Zsh installation.
 rm ~/.zshrc
 
-# Create symlinks needed in ~.
+# Create symlinks for files needed in ~.
 ln -sv ~/Desktop/dotfiles/.zshrc ~
 ln -sv ~/Desktop/dotfiles/.hushlogin ~
 ln -sv ~/Workspace/dotfiles/.curlrc ~
