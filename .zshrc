@@ -72,7 +72,6 @@ plugins=(
   git
   zsh-autosuggestions
   zsh-syntax-highlighting
-  zsh-better-npm-completion
 )
 
 source $ZSH/oh-my-zsh.sh
