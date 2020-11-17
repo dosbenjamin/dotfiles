@@ -63,3 +63,6 @@ ln -sv ~/Desktop/dotfiles/.zshrc ~
 ln -sv ~/Desktop/dotfiles/.hushlogin ~
 ln -sv ~/Workspace/dotfiles/.curlrc ~
 ln -sv ~/Desktop/dotfiles/.wgetrc ~
+
+# Add custom shortcuts to Spectacle.
+cp -r spectacle.json ~/Library/Application\ Support/Spectacle/Shortcuts.json 2> /dev/null
