@@ -41,6 +41,7 @@ brew cask install messenger
 brew cask install whatsapp
 brew cask install discord
 brew cask install spectacle
+brew cask install transmission
 
 # Remove outdated versions from the cellar.
 brew cleanup
