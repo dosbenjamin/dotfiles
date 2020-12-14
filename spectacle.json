@@ -1,22 +1,22 @@
 [
   {
-    "shortcut_key_binding" : "ctrl+alt+left",
+    "shortcut_key_binding" : "",
     "shortcut_name" : "MoveToPreviousThird"
   },
   {
-    "shortcut_key_binding" : "ctrl+alt+shift+left",
+    "shortcut_key_binding" : "",
     "shortcut_name" : "MakeSmaller"
   },
   {
-    "shortcut_key_binding" : "alt+cmd+return",
+    "shortcut_key_binding" : "ctrl+alt+return",
     "shortcut_name" : "RedoLastMove"
   },
   {
-    "shortcut_key_binding" : "alt+cmd+i",
+    "shortcut_key_binding" : "ctrl+alt+i",
     "shortcut_name" : "MoveToUpperRight"
   },
   {
-    "shortcut_key_binding" : "alt+cmd+down",
+    "shortcut_key_binding" : "ctrl+alt+down",
     "shortcut_name" : "MoveToBottomHalf"
   },
   {
@@ -24,15 +24,15 @@
     "shortcut_name" : "MoveToNextDisplay"
   },
   {
-    "shortcut_key_binding" : "alt+cmd+up",
+    "shortcut_key_binding" : "ctrl+alt+up",
     "shortcut_name" : "MoveToTopHalf"
   },
   {
-    "shortcut_key_binding" : "alt+cmd+j",
+    "shortcut_key_binding" : "ctrl+alt+j",
     "shortcut_name" : "MoveToLowerLeft"
   },
   {
-    "shortcut_key_binding" : "ctrl+alt+shift+right",
+    "shortcut_key_binding" : "",
     "shortcut_name" : "MakeLarger"
   },
   {
@@ -40,35 +40,35 @@
     "shortcut_name" : "MoveToPreviousDisplay"
   },
   {
-    "shortcut_key_binding" : "alt+cmd+delete",
+    "shortcut_key_binding" : "ctrl+alt+delete",
     "shortcut_name" : "UndoLastMove"
   },
   {
-    "shortcut_key_binding" : "alt+cmd+f",
+    "shortcut_key_binding" : "ctrl+alt+f",
     "shortcut_name" : "MoveToFullscreen"
   },
   {
-    "shortcut_key_binding" : "ctrl+alt+right",
+    "shortcut_key_binding" : "",
     "shortcut_name" : "MoveToNextThird"
   },
   {
-    "shortcut_key_binding" : "alt+cmd+left",
+    "shortcut_key_binding" : "ctrl+alt+left",
     "shortcut_name" : "MoveToLeftHalf"
   },
   {
-    "shortcut_key_binding" : "alt+cmd+c",
+    "shortcut_key_binding" : "ctrl+alt+c",
     "shortcut_name" : "MoveToCenter"
   },
   {
-    "shortcut_key_binding" : "alt+cmd+right",
+    "shortcut_key_binding" : "ctrl+alt+right",
     "shortcut_name" : "MoveToRightHalf"
   },
   {
-    "shortcut_key_binding" : "alt+cmd+k",
+    "shortcut_key_binding" : "ctrl+alt+k",
     "shortcut_name" : "MoveToLowerRight"
   },
   {
-    "shortcut_key_binding" : "alt+cmd+u",
+    "shortcut_key_binding" : "ctrl+alt+u",
     "shortcut_name" : "MoveToUpperLeft"
   }
 ]
