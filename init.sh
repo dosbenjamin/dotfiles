@@ -17,31 +17,38 @@ BREW_PREFIX=$(brew --prefix)
 brew install coreutils
 ln -s "${BREW_PREFIX}/bin/gsha256sum" "${BREW_PREFIX}/bin/sha256sum"
 
-# Install `wget` with IRI support.
-brew install wget --with-iri
+# Install `wget`.
+brew install wget
 
 # Install more recent versions of some macOS tools.
-brew install vim --with-override-system-vi
+brew install vim
 brew install openssh
-
-# Install JetBrains mono font.
-brew tap homebrew/cask-fonts
-brew cask install font-jetbrains-mono
 
 # Install other useful binaries.
 brew install git
 brew install nvm
 brew install pnpm
 
+# Install JetBrains mono font.
+brew tap homebrew/cask-fonts
+brew install font-jetbrains-mono --cask
+
+# Install Logitech Options.
+brew tap homebrew/cask-drivers
+brew install logitech-options --cask
+
 # Install other useful softwares.
-brew cask install chromium
-brew cask install figma
-brew cask install visual-studio-code
-brew cask install messenger
-brew cask install whatsapp
-brew cask install discord
-brew cask install spectacle
-brew cask install transmission
+brew install chromium --cask
+brew install figma --cask
+brew install visual-studio-code --cask
+brew install messenger --cask
+brew install whatsapp --cask
+brew install discord --cask
+brew install spectacle --cask
+brew install transmission --cask
+brew install keka --cask
+brew install appcleaner --cask
+brew install firefox --cask
 
 # Remove outdated versions from the cellar.
 brew cleanup
@@ -60,10 +67,10 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/
 rm ~/.zshrc
 
 # Create symlinks for files needed in ~.
-ln -sv ~/Desktop/dotfiles/.zshrc ~
-ln -sv ~/Desktop/dotfiles/.hushlogin ~
+ln -sv ~/Workspace/dotfiles/.zshrc ~
+ln -sv ~/Workspace/dotfiles/.hushlogin ~
 ln -sv ~/Workspace/dotfiles/.curlrc ~
-ln -sv ~/Desktop/dotfiles/.wgetrc ~
+ln -sv ~/Workspace/dotfiles/.wgetrc ~
 
 # Add custom shortcuts to Spectacle.
 cp -r spectacle.json ~/Library/Application\ Support/Spectacle/Shortcuts.json 2> /dev/null
