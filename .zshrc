@@ -105,4 +105,5 @@ alias npm="pnpm"
 alias npx="pnpx"
 
 export NVM_DIR=~/.nvm
+export PATH="$PATH:$HOME/.composer/vendor/bin"
 source $(brew --prefix nvm)/nvm.sh

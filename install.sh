@@ -1,5 +1,5 @@
 # Apply macOS configuration.
-sh ./.macos
+# sh ./.macos
 
 # Install command-line tools and softwares using Homebrew.
 
@@ -28,6 +28,10 @@ brew install openssh
 brew install git
 brew install nvm
 brew install pnpm
+brew install php
+brew install phpmyadmin
+brew install mariadb
+brew install composer
 
 # Install JetBrains mono font.
 brew tap homebrew/cask-fonts
@@ -49,6 +53,8 @@ brew install transmission --cask
 brew install keka --cask
 brew install appcleaner --cask
 brew install firefox --cask
+brew install slack --cask
+brew install onyx --cask
 
 # Remove outdated versions from the cellar.
 brew cleanup
@@ -74,3 +80,13 @@ ln -sv ~/Workspace/dotfiles/.wgetrc ~
 
 # Add custom shortcuts to Spectacle.
 cp -r spectacle.json ~/Library/Application\ Support/Spectacle/Shortcuts.json 2> /dev/null
+
+# Install Laravel Valet.
+composer global require laravel/valet
+valet install
+
+# Setup phpMyAdmin
+cd /usr/local/share/phpmyadmin
+valet link
+valet secure
+cd
