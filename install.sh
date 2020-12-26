@@ -1,5 +1,5 @@
 # Apply macOS configuration.
-# sh ./.macos
+sh ./.macos
 
 # Install command-line tools and softwares using Homebrew.
 
@@ -58,6 +58,7 @@ brew install onyx --cask
 
 # Remove outdated versions from the cellar.
 brew cleanup
+brew cleanup -s
 
 # Install Node LTS Fermium (V14).
 nvm install lts/fermium
@@ -90,3 +91,6 @@ cd /usr/local/share/phpmyadmin
 valet link
 valet secure
 cd
+
+# Reboot
+sudo reboot
