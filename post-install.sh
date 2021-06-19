@@ -5,8 +5,5 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/
 # Install Node LTS Fermium (V14).
 nvm install lts/fermium
 
-# Add custom shortcuts to Spectacle.
-cp -r spectacle.json ~/Library/Application\ Support/Spectacle/Shortcuts.json 2> /dev/null
-
 # Reboot
 sudo reboot

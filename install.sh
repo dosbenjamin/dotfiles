@@ -36,22 +36,21 @@ brew install font-jetbrains-mono --cask
 
 # Install drivers.
 brew tap homebrew/cask-drivers
-brew install asix-ax88179 --cask
 brew install logitech-options --cask
 
 # Install other useful softwares.
 brew install appcleaner --cask
-brew install brave --cask
+brew install brave-browser --cask
 brew install discord --cask
 brew install figma --cask
-brew install visual-studio-code --cask
 brew install keka --cask
 brew install messenger --cask
 brew install onyx --cask
 brew install qbittorrent --cask
+brew install rectangle --cask
 brew install slack --cask
-brew install spectacle --cask
 brew install spotify --cask
+brew install visual-studio-code --cask
 brew install whatsapp --cask
 
 # Remove outdated versions from the cellar.
@@ -62,10 +61,10 @@ brew cleanup -s
 rm ~/.zshrc
 
 # Create symlinks for files needed in ~.
-ln -sv ~/Workspace/dotfiles/.zshrc ~
-ln -sv ~/Workspace/dotfiles/.hushlogin ~
-ln -sv ~/Workspace/dotfiles/.curlrc ~
-ln -sv ~/Workspace/dotfiles/.wgetrc ~
+ln -sv ~/Workspace/dotfiles-mac/.zshrc ~
+ln -sv ~/Workspace/dotfiles-mac/.hushlogin ~
+ln -sv ~/Workspace/dotfiles-mac/.curlrc ~
+ln -sv ~/Workspace/dotfiles-mac/.wgetrc ~
 
 # Install Oh My Zsh.
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
