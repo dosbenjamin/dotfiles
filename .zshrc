@@ -23,6 +23,9 @@ ZSH_THEME="arrow"
 # Case-sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
 
+# Uncomment the following line to skip the verification of insecure directories.
+ZSH_DISABLE_COMPFIX="true"
+
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
 
@@ -101,9 +104,11 @@ alias c="clear"
 alias zshconfig="code ~/.zshrc"
 alias zshreload="source ~/.zshrc"
 alias ws="cd ~/Workspace"
+alias mca="cd ~/McArnolds"
 alias npm="pnpm"
 alias npx="pnpx"
 
 source $(brew --prefix nvm)/nvm.sh
 export NVM_DIR=~/.nvm
 export PATH="$HOME/.composer/vendor/bin:$PATH"
+export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"

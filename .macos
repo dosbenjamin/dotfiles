@@ -18,10 +18,10 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 ###############################################################################
 
 # Set computer name (as done via System Preferences → Sharing)
-sudo scutil --set ComputerName "0x6D746873"
-sudo scutil --set HostName "0x6D746873"
-sudo scutil --set LocalHostName "0x6D746873"
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "0x6D746873"
+sudo scutil --set ComputerName "Benjamin's MacBook Pro"
+sudo scutil --set HostName "MacBook-Pro"
+sudo scutil --set LocalHostName "Benjamin-MacBook-Pro"
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "Benjamin-MacBook-Pro"
 
 # Set standby delay to 24 hours (default is 1 hour)
 # sudo pmset -a standbydelay 86400
@@ -138,7 +138,7 @@ sudo spctl --master-disable
 ###############################################################################
 
 # Disable hibernation (speeds up entering sleep mode)
-# sudo pmset -a hibernatemode 0
+sudo pmset -a hibernatemode 0
 
 # Remove the sleep image file to save disk space
 sudo rm /private/var/vm/sleepimage
@@ -164,6 +164,9 @@ sudo chflags uchg /private/var/vm/sleepimage
 
 # Disable “natural” (Lion-style) scrolling
 # defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+
+# Disable mouse acceleration
+defaults write .GlobalPreferences com.apple.mouse.scaling -1
 
 # Increase sound quality for Bluetooth headphones/headsets
 defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
@@ -337,10 +340,6 @@ chflags nohidden ~/Library
 # Show the /Volumes folder
 sudo chflags nohidden /Volumes
 
-# Remove Dropbox’s green checkmark icons in Finder
-file=/Applications/Dropbox.app/Contents/Resources/emblem-dropbox-uptodate.icns
-[ -e "${file}" ] && mv -f "${file}" "${file}.bak"
-
 # Expand the following File Info panes:
 # “General”, “Open with”, and “Sharing & Permissions”
 defaults write com.apple.finder FXInfoPanesExpanded -dict \
@@ -405,7 +404,7 @@ defaults write com.apple.dock mru-spaces -bool false
 # Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
 
-# Turn of Dock magnification
+# Turn off Dock magnification
 defaults write com.apple.dock magnification -bool  NO
 
 # Make Dock icons of hidden applications translucent
@@ -569,11 +568,11 @@ defaults write com.apple.mail SpellCheckingBehavior -string "NoSpellCheckingEnab
 ###############################################################################
 
 # Hide Spotlight tray-icon (and subsequent helper)
-sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search
+# sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search
 # Disable Spotlight indexing for any volume that gets mounted and has not yet
 # been indexed before.
 # Use `sudo mdutil -i off "/Volumes/foo"` to stop indexing any volume.
-sudo defaults write /.Spotlight-V100/VolumeConfiguration Exclusions -array "/Volumes"
+# sudo defaults write /.Spotlight-V100/VolumeConfiguration Exclusions -array "/Volumes"
 # Change indexing order and disable some search results
 # Yosemite-specific search results (remove them if you are using macOS 10.9 or older):
 # 	MENU_DEFINITION
@@ -686,7 +685,7 @@ defaults write com.apple.Terminal ShowLineMarks -int 0
 defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 
 # Disable local Time Machine backups
-hash tmutil &> /dev/null && sudo tmutil disablelocal
+hash tmutil &> /dev/null && sudo tmutil disable
 
 ###############################################################################
 # Activity Monitor                                                            #
@@ -794,9 +793,7 @@ for app in "Activity Monitor" \
 	"Messages" \
 	"Photos" \
 	"Safari" \
-	"Spectacle" \
-	"SystemUIServer" \
-	"Terminal"; do
+	"SystemUIServer"; do
 	killall "${app}" &> /dev/null
 done
 echo "Done. Note that some of these changes require a logout/restart to take effect."
